@@ -3,11 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "eslint ./"
   },
   "dependencies": {
     "react": "15.2.1",
-    "react-native": "^0.30.0",
+    "react-native": "^0.31.0",
+    "react-native-material-design-styles": "^0.2.6",
+    "react-native-vector-icons": "^2.0.3",
     "babel-eslint": "^6.1.2",
     "eslint": "^3.1.1",
     "eslint-config-airbnb": "^9.0.1",
