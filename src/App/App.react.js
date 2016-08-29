@@ -12,18 +12,17 @@ class App extends Component {
     getChildContext() {
         return { uiTheme: getTheme() };
     }
-
-    onNavigatorRef(component) {
-        this.navigator = component;
-    }
-    renderScene(route) {
+    renderScene(route, navigator) {
         return (
             <View>
                 <Toolbar
                     leftElement="arrow-back"
+                    onLeftElementPress={() => navigator.pop()}
                     centerElement={route.title}
                 />
-                <route.Page />
+                <route.Page
+                    navigator={navigator}
+                />
             </View>
         );
     }
@@ -32,7 +31,7 @@ class App extends Component {
         return (
             <Navigator
                 configureScene={App.configureScene}
-                initialRoute={routes.avatar}
+                initialRoute={routes.home}
                 ref={this.onNavigatorRef}
                 renderScene={this.renderScene}
             />
