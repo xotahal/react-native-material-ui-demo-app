@@ -1,12 +1,16 @@
 import { Navigator, View } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import routes from '../routes';
+import getTheme from '../react-native-material-ui/src/styles/getTheme';
 
 import { ToolbarExperimental as Toolbar } from '../react-native-material-ui';
 
 class App extends Component {
     static configureScene(route) {
         return route.animationType || Navigator.SceneConfigs.FloatFromRight;
+    }
+    getChildContext() {
+        return { uiTheme: getTheme() };
     }
 
     onNavigatorRef(component) {
@@ -35,5 +39,9 @@ class App extends Component {
         );
     }
 }
+
+App.childContextTypes = {
+    uiTheme: PropTypes.object.isRequired,
+};
 
 export default App;

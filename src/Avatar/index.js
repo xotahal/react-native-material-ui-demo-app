@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 
-import { Avatar } from '../react-native-material-ui/';
+import { Avatar } from '../react-native-material-ui/src';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
