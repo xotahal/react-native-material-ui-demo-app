@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import routes from '../routes';
 import getTheme from '../react-native-material-ui/src/styles/getTheme';
 
-import { ToolbarExperimental as Toolbar } from '../react-native-material-ui';
+import { Toolbar } from '../react-native-material-ui/src';
 
 class App extends Component {
     static configureScene(route) {
@@ -19,6 +19,7 @@ class App extends Component {
                     leftElement="arrow-back"
                     onLeftElementPress={() => navigator.pop()}
                     centerElement={route.title}
+                    rightElement="person"
                 />
                 <route.Page
                     navigator={navigator}
