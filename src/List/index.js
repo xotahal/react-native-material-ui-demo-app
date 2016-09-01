@@ -1,8 +1,7 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import React, { Component } from 'react';
 
-import { Divider } from '../react-native-material-ui';
-import ListItem from '../react-native-material-ui/lib/List/ListItem';
+import { ListItem, Subheader } from '../react-native-material-ui/src';
 
 const styles = StyleSheet.create({
     container: {
@@ -14,41 +13,87 @@ class List extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ListItem centerElement="Center element as a text" />
-                <Divider />
-                <ListItem
-                    centerElement={{
-                        primaryText: 'Center element as an object',
-                    }}
-                />
-                <Divider />
-                <ListItem
-                    centerElement={{
-                        primaryText: 'Center element as an object',
-                        secondaryText: 'Subtext',
-                    }}
-                />
-                <Divider />
-                <ListItem
-                    leftElement="person"
-                    centerElement={{
-                        primaryText: 'Center element as an object',
-                    }}
-                />
-                <Divider />
-                <ListItem
-                    leftElement="person"
-                    centerElement={{
-                        primaryText: 'Center element as an object',
-                        secondaryText: 'Subtext',
-                    }}
-                />
-                <Divider />
-                <ListItem
-                    leftElement="person"
-                    centerElement={<Text>Custom center element</Text>}
-                />
-                <Divider />
+                <ScrollView style={styles.container}>
+                    <Subheader text="One line" />
+                    <ListItem
+                        divider
+                        centerElement="Center element as a text"
+                    />
+                    <ListItem
+                        divider
+                        centerElement={{
+                            primaryText: 'Center element as an object',
+                        }}
+                    />
+                    <ListItem
+                        divider
+                        leftElement="person"
+                        centerElement={{
+                            primaryText: 'Center element as an object',
+                        }}
+                    />
+                    <ListItem
+                        divider
+                        dense
+                        centerElement="Center element as a text (dense)"
+                    />
+                    <ListItem
+                        divider
+                        centerElement="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    />
+
+
+                    <Subheader text="Two lines" />
+                    <ListItem
+                        divider
+                        dense
+                        centerElement={{
+                            primaryText: 'Center element as an object (dense)',
+                            secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum',
+                        }}
+                    />
+                    <ListItem
+                        divider
+                        centerElement={{
+                            primaryText: 'Center element as an object',
+                            secondaryText: 'Subtext',
+                        }}
+                    />
+                    <ListItem
+                        divider
+                        leftElement="person"
+                        centerElement={{
+                            primaryText: 'Center element as an object',
+                            secondaryText: 'Subtext',
+                        }}
+                    />
+                    <ListItem
+                        divider
+                        leftElement="person"
+                        centerElement={{
+                            primaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                            secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum',
+                        }}
+                        rightElement="info"
+                    />
+                    <Subheader text="Three lines" />
+                    <Subheader text="Dynamic" />
+                    <ListItem
+                        divider
+                        leftElement="person"
+                        numberOfLines="dynamic"
+                        centerElement={{
+                            primaryText: 'With dynamic second line',
+                            secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing lit',
+                        }}
+                    />
+                    <Subheader text="Custom" />
+                    <ListItem
+                        divider
+                        leftElement="person"
+                        centerElement={<Text>Custom center element</Text>}
+                    />
+                </ScrollView>
             </View>
         );
     }

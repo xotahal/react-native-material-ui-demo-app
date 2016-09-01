@@ -1,7 +1,8 @@
-import { Navigator, View } from 'react-native';
+import { Navigator } from 'react-native';
 import React, { Component, PropTypes } from 'react';
 import routes from '../routes';
 import getTheme from '../react-native-material-ui/src/styles/getTheme';
+import Container from '../Container';
 
 import { Toolbar } from '../react-native-material-ui/src';
 
@@ -14,7 +15,7 @@ class App extends Component {
     }
     renderScene(route, navigator) {
         return (
-            <View>
+            <Container>
                 <Toolbar
                     leftElement="arrow-back"
                     onLeftElementPress={() => navigator.pop()}
@@ -24,7 +25,7 @@ class App extends Component {
                 <route.Page
                     navigator={navigator}
                 />
-            </View>
+            </Container>
         );
     }
 
@@ -32,7 +33,7 @@ class App extends Component {
         return (
             <Navigator
                 configureScene={App.configureScene}
-                initialRoute={routes.home}
+                initialRoute={routes.list}
                 ref={this.onNavigatorRef}
                 renderScene={this.renderScene}
             />
