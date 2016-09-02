@@ -18,12 +18,14 @@ class List extends Component {
                     <ListItem
                         divider
                         centerElement="Center element as a text"
+                        onPress={() => {}}
                     />
                     <ListItem
                         divider
                         centerElement={{
                             primaryText: 'Center element as an object',
                         }}
+                        onPress={() => {}}
                     />
                     <ListItem
                         divider
@@ -31,6 +33,7 @@ class List extends Component {
                         centerElement={{
                             primaryText: 'Center element as an object',
                         }}
+                        onPress={() => {}}
                     />
                     <ListItem
                         divider
@@ -75,6 +78,7 @@ class List extends Component {
                             secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum',
                         }}
                         rightElement="info"
+                        onPress={() => {}}
                     />
                     <Subheader text="Three lines" />
                     <Subheader text="Dynamic" />
@@ -86,6 +90,7 @@ class List extends Component {
                             primaryText: 'With dynamic second line',
                             secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing lit',
                         }}
+                        onPress={() => {}}
                     />
                     <Subheader text="Custom" />
                     <ListItem
