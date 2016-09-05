@@ -3,6 +3,7 @@ import Home from './App/Home.react';
 import ActionButton from './ActionButton';
 import Avatar from './Avatar';
 import Button from './Button';
+import Card from './Card';
 import List from './List';
 
 export default {
@@ -17,6 +18,10 @@ export default {
     button: {
         title: 'Buttons',
         Page: Button,
+    },
+    card: {
+        title: 'Cards',
+        Page: Card,
     },
     actionButton: {
         title: 'Action button',

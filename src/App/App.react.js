@@ -33,7 +33,7 @@ class App extends Component {
         return (
             <Navigator
                 configureScene={App.configureScene}
-                initialRoute={routes.home}
+                initialRoute={routes.card}
                 ref={this.onNavigatorRef}
                 renderScene={this.renderScene}
             />
