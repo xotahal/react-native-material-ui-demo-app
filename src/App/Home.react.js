@@ -26,6 +26,16 @@ class Home extends Component {
                 />
                 <ListItem
                     divider
+                    centerElement="Checkbox"
+                    onPress={() => this.props.navigator.push(routes.checkbox)}
+                />
+                <ListItem
+                    divider
+                    centerElement="Icon toggles"
+                    onPress={() => this.props.navigator.push(routes.iconToggle)}
+                />
+                <ListItem
+                    divider
                     centerElement="List items"
                     onPress={() => this.props.navigator.push(routes.list)}
                 />

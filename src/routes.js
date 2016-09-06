@@ -4,6 +4,8 @@ import ActionButton from './ActionButton';
 import Avatar from './Avatar';
 import Button from './Button';
 import Card from './Card';
+import Checkbox from './Checkbox';
+import IconToggle from './IconToggle';
 import List from './List';
 
 export default {
@@ -23,9 +25,17 @@ export default {
         title: 'Cards',
         Page: Card,
     },
+    checkbox: {
+        title: 'Checkboxes',
+        Page: Checkbox,
+    },
     actionButton: {
         title: 'Action button',
         Page: ActionButton,
+    },
+    iconToggle: {
+        title: 'Icon toggles',
+        Page: IconToggle,
     },
     list: {
         title: 'List items',
