@@ -5,6 +5,7 @@ import Avatar from './Avatar';
 import Button from './Button';
 import Card from './Card';
 import Checkbox from './Checkbox';
+import Dialog from './Dialog';
 import IconToggle from './IconToggle';
 import List from './List';
 
@@ -28,6 +29,10 @@ export default {
     checkbox: {
         title: 'Checkboxes',
         Page: Checkbox,
+    },
+    dialog: {
+        title: 'Dialogs',
+        Page: Dialog,
     },
     actionButton: {
         title: 'Action button',
