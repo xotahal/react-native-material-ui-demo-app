@@ -6,6 +6,7 @@ import Button from './Button';
 import Card from './Card';
 import Checkbox from './Checkbox';
 import Dialog from './Dialog';
+import Drawer from './Drawer';
 import IconToggle from './IconToggle';
 import List from './List';
 
@@ -33,6 +34,10 @@ export default {
     dialog: {
         title: 'Dialogs',
         Page: Dialog,
+    },
+    drawer: {
+        title: 'Drawer',
+        Page: Drawer,
     },
     actionButton: {
         title: 'Action button',
