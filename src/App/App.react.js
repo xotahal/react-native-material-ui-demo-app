@@ -40,7 +40,7 @@ class App extends Component {
         return (
             <Navigator
                 configureScene={App.configureScene}
-                initialRoute={routes.drawer}
+                initialRoute={routes.home}
                 ref={this.onNavigatorRef}
                 renderScene={this.renderScene}
             />

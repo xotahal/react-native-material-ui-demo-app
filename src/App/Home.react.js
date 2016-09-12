@@ -26,8 +26,23 @@ class Home extends Component {
                 />
                 <ListItem
                     divider
+                    centerElement="Cards"
+                    onPress={() => this.props.navigator.push(routes.card)}
+                />
+                <ListItem
+                    divider
                     centerElement="Checkbox"
                     onPress={() => this.props.navigator.push(routes.checkbox)}
+                />
+                <ListItem
+                    divider
+                    centerElement="Dialog"
+                    onPress={() => this.props.navigator.push(routes.dialog)}
+                />
+                <ListItem
+                    divider
+                    centerElement="Drawer"
+                    onPress={() => this.props.navigator.push(routes.drawer)}
                 />
                 <ListItem
                     divider
@@ -38,6 +53,11 @@ class Home extends Component {
                     divider
                     centerElement="List items"
                     onPress={() => this.props.navigator.push(routes.list)}
+                />
+                <ListItem
+                    divider
+                    centerElement="Radio buttons"
+                    onPress={() => this.props.navigator.push(routes.radioButton)}
                 />
             </Container>
         );

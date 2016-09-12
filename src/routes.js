@@ -9,6 +9,7 @@ import Dialog from './Dialog';
 import Drawer from './Drawer';
 import IconToggle from './IconToggle';
 import List from './List';
+import RadioButton from './RadioButton';
 
 export default {
     home: {
@@ -50,5 +51,9 @@ export default {
     list: {
         title: 'List items',
         Page: List,
+    },
+    radioButton: {
+        title: 'Radio buttons',
+        Page: RadioButton,
     },
 };
