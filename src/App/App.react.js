@@ -1,19 +1,21 @@
+import React, { Component } from 'react';
 import { Navigator, NativeModules } from 'react-native';
-import React, { Component, PropTypes } from 'react';
+
+import { COLOR, ThemeProvider, Toolbar } from '../react-native-material-ui';
 import routes from '../routes';
-import getTheme from '../react-native-material-ui/src/styles/getTheme';
 import Container from '../Container';
 
-import { Toolbar } from '../react-native-material-ui/src';
-
 const UIManager = NativeModules.UIManager;
+
+const uiTheme = {
+    palette: {
+        primaryColor: COLOR.green500,
+    },
+};
 
 class App extends Component {
     static configureScene(route) {
         return route.animationType || Navigator.SceneConfigs.FloatFromRight;
-    }
-    getChildContext() {
-        return { uiTheme: getTheme() };
     }
     componentWillMount() {
         if (UIManager.setLayoutAnimationEnabledExperimental) {
@@ -38,18 +40,16 @@ class App extends Component {
 
     render() {
         return (
-            <Navigator
-                configureScene={App.configureScene}
-                initialRoute={routes.home}
-                ref={this.onNavigatorRef}
-                renderScene={this.renderScene}
-            />
+            <ThemeProvider uiTheme={uiTheme}>
+                <Navigator
+                    configureScene={App.configureScene}
+                    initialRoute={routes.home}
+                    ref={this.onNavigatorRef}
+                    renderScene={this.renderScene}
+                />
+            </ThemeProvider>
         );
     }
 }
-
-App.childContextTypes = {
-    uiTheme: PropTypes.object.isRequired,
-};
 
 export default App;
