@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import { ToastAndroid } from 'react-native';
 
 import routes from '../routes';
 
 import Container from '../Container';
 // components
-import { ListItem } from '../react-native-material-ui/src';
+import { ActionButton, ListItem } from '../react-native-material-ui/src';
 
 const propTypes = {
     navigator: PropTypes.object.isRequired,
@@ -58,6 +59,9 @@ class Home extends Component {
                     divider
                     centerElement="Radio buttons"
                     onPress={() => this.props.navigator.push(routes.radioButton)}
+                />
+                <ActionButton
+                    onPress={() => ToastAndroid.show('Action pressed', ToastAndroid.SHORT)}
                 />
             </Container>
         );
