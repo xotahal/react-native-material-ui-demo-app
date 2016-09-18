@@ -17,6 +17,11 @@ class Home extends Component {
             <Container>
                 <ListItem
                     divider
+                    centerElement="Action buttons"
+                    onPress={() => this.props.navigator.push(routes.actionButton)}
+                />
+                <ListItem
+                    divider
                     centerElement="Avatars"
                     onPress={() => this.props.navigator.push(routes.avatar)}
                 />
@@ -61,7 +66,10 @@ class Home extends Component {
                     onPress={() => this.props.navigator.push(routes.radioButton)}
                 />
                 <ActionButton
-                    onPress={() => ToastAndroid.show('Action pressed', ToastAndroid.SHORT)}
+                    actions={['email', 'phone', 'sms', 'favorite']}
+                    icon="share"
+                    transition="speedDial"
+                    onPress={(action) => ToastAndroid.show(action, ToastAndroid.SHORT)}
                 />
             </Container>
         );

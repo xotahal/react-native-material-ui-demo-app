@@ -1,27 +1,38 @@
-import { Text, View, StyleSheet } from 'react-native';
-import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
+import React, { Component, PropTypes } from 'react';
 
-import { Divider } from '../react-native-material-ui';
-import ListItem from '../react-native-material-ui/lib/List/ListItem';
+import { ListItem } from '../react-native-material-ui';
+
+import routes from '../routes';
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
 });
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+};
 
-class List extends Component {
+class ActionButtonSpec extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <ListItem
-                    leftElement="person"
-                    centerElement={<Text>Custom center element</Text>}
+                    divider
+                    centerElement="With toolbar transition"
+                    onPress={() => this.props.navigator.push(routes.actionButtonToolbar)}
                 />
-                <Divider />
+                <ListItem
+                    divider
+                    centerElement="With speed dial transition"
+                    onPress={() => this.props.navigator.push(routes.actionButtonSpeedDial)}
+                />
             </View>
         );
     }
 }
 
-export default List;
+ActionButtonSpec.propTypes = propTypes;
+
+export default ActionButtonSpec;

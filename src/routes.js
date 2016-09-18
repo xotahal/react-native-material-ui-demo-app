@@ -1,6 +1,8 @@
 import Home from './App/Home.react';
 // components
 import ActionButton from './ActionButton';
+import ActionButtonToolbar from './ActionButton/ActionButtonToolbar.react';
+import ActionButtonSpeedDial from './ActionButton/ActionButtonSpeedDial.react';
 import Avatar from './Avatar';
 import Button from './Button';
 import Card from './Card';
@@ -15,6 +17,18 @@ export default {
     home: {
         title: 'Select component',
         Page: Home,
+    },
+    actionButton: {
+        title: 'Action buttons',
+        Page: ActionButton,
+    },
+    actionButtonToolbar: {
+        title: 'Toolbar transition',
+        Page: ActionButtonToolbar,
+    },
+    actionButtonSpeedDial: {
+        title: 'Speed dial transition',
+        Page: ActionButtonSpeedDial,
     },
     avatar: {
         title: 'Avatars',
@@ -39,10 +53,6 @@ export default {
     drawer: {
         title: 'Drawer',
         Page: Drawer,
-    },
-    actionButton: {
-        title: 'Action button',
-        Page: ActionButton,
     },
     iconToggle: {
         title: 'Icon toggles',
