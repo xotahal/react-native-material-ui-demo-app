@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { ToastAndroid, ScrollView } from 'react-native';
+import { ToastAndroid, ScrollView, Platform } from 'react-native';
 
 import routes from '../routes';
 
@@ -76,7 +76,11 @@ class Home extends Component {
                     actions={['email', 'phone', 'sms', 'favorite']}
                     icon="share"
                     transition="speedDial"
-                    onPress={(action) => ToastAndroid.show(action, ToastAndroid.SHORT)}
+                    onPress={(action) => {
+                        if (Platform.OS === 'android') {
+                            ToastAndroid.show(action, ToastAndroid.SHORT);
+                        }
+                    }}
                 />
             </Container>
         );

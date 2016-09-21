@@ -36,6 +36,7 @@
 ehthumbs.db
 Thumbs.db
 fastlane/README*
+*xcworkspacedata
 
 # Directories #
 ###############
