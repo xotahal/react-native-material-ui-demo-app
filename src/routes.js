@@ -12,6 +12,7 @@ import Drawer from './Drawer';
 import IconToggle from './IconToggle';
 import List from './List';
 import RadioButton from './RadioButton';
+import Toolbar from './Toolbars';
 
 export default {
     home: {
@@ -65,5 +66,9 @@ export default {
     radioButton: {
         title: 'Radio buttons',
         Page: RadioButton,
+    },
+    toolbar: {
+        title: 'Toolbars',
+        Page: Toolbar,
     },
 };

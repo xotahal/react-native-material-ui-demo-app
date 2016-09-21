@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navigator, NativeModules } from 'react-native';
+import { Navigator, NativeModules, StatusBar, View } from 'react-native';
 
 import { COLOR, ThemeProvider, Toolbar } from '../react-native-material-ui';
 import routes from '../routes';
@@ -25,6 +25,8 @@ class App extends Component {
     renderScene(route, navigator) {
         return (
             <Container>
+                <StatusBar backgroundColor="rgba(0, 0, 0, 0.2)" translucent />
+                <View style={{ backgroundColor: COLOR.green500, height: 24 }} />
                 <Toolbar
                     leftElement="arrow-back"
                     onLeftElementPress={() => navigator.pop()}
