@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, ScrollView, ToastAndroid } from 'react-native';
+import { Text, View, StyleSheet, ScrollView, ToastAndroid, Platform } from 'react-native';
 import React, { Component } from 'react';
 
 import { ListItem, Subheader } from '../react-native-material-ui/src';
@@ -78,13 +78,17 @@ class List extends Component {
                             secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum',
                         }}
                         rightElement="info"
-                        onLeftElementPress={() =>
-                            ToastAndroid.show('Left element pressed', ToastAndroid.SHORT)
-                        }
+                        onLeftElementPress={() => {
+                            if (Platform.OS === 'android') {
+                                ToastAndroid.show('Left element pressed', ToastAndroid.SHORT);
+                            }
+                        }}
                         onPress={() => ToastAndroid.show('List item pressed', ToastAndroid.SHORT)}
-                        onRightElementPress={() =>
-                            ToastAndroid.show('Right element pressed', ToastAndroid.SHORT)
-                        }
+                        onRightElementPress={() => {
+                            if (Platform.OS === 'android') {
+                                ToastAndroid.show('Right element pressed', ToastAndroid.SHORT);
+                            }
+                        }}
                     />
                     <Subheader text="Three lines" />
                     <Subheader text="Dynamic" />
