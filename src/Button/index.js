@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { Button, Subheader, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -14,6 +14,11 @@ const styles = StyleSheet.create({
         marginHorizontal: 8,
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class ButtonPage extends Component {
     render() {
@@ -81,5 +86,7 @@ class ButtonPage extends Component {
         );
     }
 }
+
+ButtonPage.propTypes = propTypes;
 
 export default ButtonPage;

@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { COLOR, IconToggle, Subheader, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -10,6 +10,11 @@ const styles = StyleSheet.create({
         paddingLeft: 4,
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class IconToggleSpec extends Component {
     constructor(props) {
@@ -41,5 +46,7 @@ class IconToggleSpec extends Component {
         );
     }
 }
+
+IconToggleSpec.propTypes = propTypes;
 
 export default IconToggleSpec;

@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { Avatar, Card, ListItem, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -10,6 +10,11 @@ const styles = StyleSheet.create({
         paddingBottom: 16,
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class CardSpec extends Component {
     render() {
@@ -58,5 +63,7 @@ class CardSpec extends Component {
         );
     }
 }
+
+CardSpec.propTypes = propTypes;
 
 export default CardSpec;

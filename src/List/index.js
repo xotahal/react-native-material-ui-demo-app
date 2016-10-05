@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, ScrollView, ToastAndroid, Platform } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { ListItem, Subheader, Toolbar } from '../react-native-material-ui/src';
 
@@ -8,6 +8,11 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class List extends Component {
     render() {
@@ -118,5 +123,7 @@ class List extends Component {
         );
     }
 }
+
+List.propTypes = propTypes;
 
 export default List;

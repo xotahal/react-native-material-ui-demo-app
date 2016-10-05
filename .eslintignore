@@ -2,3 +2,4 @@ android/**
 build/**
 ios/**
 node_modules/**
+**/__test__/**

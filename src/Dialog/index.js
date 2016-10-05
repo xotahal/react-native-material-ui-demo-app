@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { Dialog, DialogDefaultActions, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -11,6 +11,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class DialogSpec extends Component {
     constructor(props) {
@@ -49,5 +54,7 @@ class DialogSpec extends Component {
         );
     }
 }
+
+DialogSpec.propTypes = propTypes;
 
 export default DialogSpec;

@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { Avatar, Drawer, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -12,6 +12,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class DrawerSpec extends Component {
     render() {
@@ -62,5 +67,7 @@ class DrawerSpec extends Component {
         );
     }
 }
+
+DrawerSpec.propTypes = propTypes;
 
 export default DrawerSpec;

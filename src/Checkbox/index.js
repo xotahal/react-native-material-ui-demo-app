@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { Checkbox, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 4,
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class CheckboxSpec extends Component {
     constructor(props) {
@@ -29,7 +34,7 @@ class CheckboxSpec extends Component {
                         label="Unchecked"
                         checked={this.state.checked}
                         value="Value"
-                        onCheck={(checked) => this.setState({ checked })}
+                        onCheck={checked => this.setState({ checked })}
                     />
                     <Checkbox label="Checked by default" checked value="Value" />
                     <Checkbox
@@ -46,5 +51,7 @@ class CheckboxSpec extends Component {
         );
     }
 }
+
+CheckboxSpec.propTypes = propTypes;
 
 export default CheckboxSpec;

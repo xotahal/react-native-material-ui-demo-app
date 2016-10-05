@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import { Avatar, Subheader, Toolbar } from '../react-native-material-ui/src';
 import Container from '../Container';
@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
         paddingLeft: 16,
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class AvatarSpec extends Component {
     render() {
@@ -31,5 +36,7 @@ class AvatarSpec extends Component {
         );
     }
 }
+
+AvatarSpec.propTypes = propTypes;
 
 export default AvatarSpec;

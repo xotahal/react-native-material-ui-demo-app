@@ -5,7 +5,7 @@ import routes from '../routes';
 
 import Container from '../Container';
 // components
-import { ActionButton, Avatar, ListItem, Toolbar, COLOR } from '../react-native-material-ui/src';
+import { ActionButton, Avatar, ListItem, Toolbar } from '../react-native-material-ui/src';
 
 const propTypes = {
     navigator: PropTypes.object.isRequired,
@@ -108,7 +108,12 @@ class Home extends Component {
                     {this.renderItem('Toolbars', routes.toolbar)}
                 </ScrollView>
                 <ActionButton
-                    actions={['email', 'phone', 'sms', 'favorite']}
+                    actions={[
+                        { icon: 'email', label: 'Email' },
+                        { icon: 'phone', label: 'Phone' },
+                        { icon: 'sms', label: 'Text' },
+                        { icon: 'favorite', label: 'Favorite' },
+                    ]}
                     icon="share"
                     transition="speedDial"
                     onPress={(action) => {
@@ -118,6 +123,8 @@ class Home extends Component {
                     }}
                 />
             </Container>
+
+
         );
     }
 }

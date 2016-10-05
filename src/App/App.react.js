@@ -17,12 +17,7 @@ class App extends Component {
     static configureScene(route) {
         return route.animationType || Navigator.SceneConfigs.FloatFromRight;
     }
-    componentWillMount() {
-        if (UIManager.setLayoutAnimationEnabledExperimental) {
-            UIManager.setLayoutAnimationEnabledExperimental(true);
-        }
-    }
-    renderScene(route, navigator) {
+    static renderScene(route, navigator) {
         return (
             <Container>
                 <StatusBar backgroundColor="rgba(0, 0, 0, 0.2)" translucent />
@@ -34,7 +29,11 @@ class App extends Component {
             </Container>
         );
     }
-
+    componentWillMount() {
+        if (UIManager.setLayoutAnimationEnabledExperimental) {
+            UIManager.setLayoutAnimationEnabledExperimental(true);
+        }
+    }
     render() {
         return (
             <ThemeProvider uiTheme={uiTheme}>
@@ -42,7 +41,7 @@ class App extends Component {
                     configureScene={App.configureScene}
                     initialRoute={routes.home}
                     ref={this.onNavigatorRef}
-                    renderScene={this.renderScene}
+                    renderScene={App.renderScene}
                 />
             </ThemeProvider>
         );

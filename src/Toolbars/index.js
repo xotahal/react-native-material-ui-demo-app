@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Container from '../Container';
 
@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
         paddingTop: 16,
     },
 });
+
+const propTypes = {
+    navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+};
 
 class ToolbarSpec extends Component {
     render() {
@@ -57,5 +62,7 @@ class ToolbarSpec extends Component {
         );
     }
 }
+
+ToolbarSpec.propTypes = propTypes;
 
 export default ToolbarSpec;
