@@ -14,6 +14,11 @@ class ToolbarSpec extends Component {
     render() {
         return (
             <Container>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <View style={styles.container}>
                     <Toolbar
                         centerElement="With menu"

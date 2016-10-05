@@ -5,17 +5,30 @@ import routes from '../routes';
 
 import Container from '../Container';
 // components
-import { ActionButton, ListItem } from '../react-native-material-ui/src';
+import { ActionButton, ListItem, Toolbar } from '../react-native-material-ui/src';
 
 const propTypes = {
     navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
 };
 
 class Home extends Component {
     render() {
         return (
             <Container>
-                <ScrollView>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                    searchable={{
+                        placeholder: 'Search',
+                        autoFocus: true,
+                    }}
+                />
+                <ScrollView
+                    keyboardShouldPersistTaps
+                    keyboardDismissMode="interactive"
+                >
                     <ListItem
                         divider
                         centerElement="Action buttons"

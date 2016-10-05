@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 
-import { Button, Subheader } from '../react-native-material-ui';
+import { Button, Subheader, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -19,6 +19,11 @@ class ButtonPage extends Component {
     render() {
         return (
             <Container>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <Subheader text="Flat buttons" />
                 <View style={styles.rowContainer}>
                     <View style={styles.button}>

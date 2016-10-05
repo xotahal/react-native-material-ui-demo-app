@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text } from 'react-native';
 import React, { Component } from 'react';
 
-import { Dialog, DialogDefaultActions } from '../react-native-material-ui';
+import { Dialog, DialogDefaultActions, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -21,6 +21,11 @@ class DialogSpec extends Component {
     render() {
         return (
             <Container>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <View style={styles.container}>
                     <Dialog>
                         <Dialog.Title><Text>Hello world</Text></Dialog.Title>

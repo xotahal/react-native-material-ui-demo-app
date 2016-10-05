@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import React, { Component, PropTypes } from 'react';
 
-import { ListItem } from '../react-native-material-ui';
+import { ListItem, Toolbar } from '../react-native-material-ui';
 
 import routes from '../routes';
 
@@ -12,12 +12,18 @@ const styles = StyleSheet.create({
 });
 const propTypes = {
     navigator: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
 };
 
 class ActionButtonSpec extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <ListItem
                     divider
                     centerElement="With toolbar transition"

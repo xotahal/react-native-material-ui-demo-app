@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navigator, NativeModules, StatusBar, View } from 'react-native';
 
-import { COLOR, ThemeProvider, Toolbar } from '../react-native-material-ui';
+import { COLOR, ThemeProvider } from '../react-native-material-ui';
 import routes from '../routes';
 import Container from '../Container';
 
@@ -27,13 +27,8 @@ class App extends Component {
             <Container>
                 <StatusBar backgroundColor="rgba(0, 0, 0, 0.2)" translucent />
                 <View style={{ backgroundColor: COLOR.green500, height: 24 }} />
-                <Toolbar
-                    leftElement="arrow-back"
-                    onLeftElementPress={() => navigator.pop()}
-                    centerElement={route.title}
-                    rightElement="person"
-                />
                 <route.Page
+                    route={route}
                     navigator={navigator}
                 />
             </Container>

@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 
-import { Avatar, Drawer } from '../react-native-material-ui';
+import { Avatar, Drawer, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -17,6 +17,11 @@ class DrawerSpec extends Component {
     render() {
         return (
             <Container>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <View style={styles.container}>
                     <Drawer>
                         <Drawer.Header >

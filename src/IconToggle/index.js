@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 
-import { COLOR, IconToggle, Subheader } from '../react-native-material-ui';
+import { COLOR, IconToggle, Subheader, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -20,6 +20,11 @@ class IconToggleSpec extends Component {
     render() {
         return (
             <Container>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <Subheader text="Basic (default, colored, disabled)" />
                 <View style={styles.rowContainer}>
                     <IconToggle name="star" />

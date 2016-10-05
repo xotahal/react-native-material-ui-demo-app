@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text } from 'react-native';
 import React, { Component } from 'react';
 
-import { Avatar, Card, ListItem } from '../react-native-material-ui';
+import { Avatar, Card, ListItem, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -15,6 +15,11 @@ class CardSpec extends Component {
     render() {
         return (
             <Container>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <Card>
                     <ListItem
                         leftElement={<Avatar text="JM" />}

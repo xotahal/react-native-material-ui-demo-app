@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, ScrollView, ToastAndroid, Platform } from 'react-native';
 import React, { Component } from 'react';
 
-import { ListItem, Subheader } from '../react-native-material-ui/src';
+import { ListItem, Subheader, Toolbar } from '../react-native-material-ui/src';
 
 const styles = StyleSheet.create({
     container: {
@@ -13,6 +13,11 @@ class List extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Toolbar
+                    leftElement="arrow-back"
+                    onLeftElementPress={() => this.props.navigator.pop()}
+                    centerElement={this.props.route.title}
+                />
                 <ScrollView style={styles.container}>
                     <Subheader text="One line" />
                     <ListItem
