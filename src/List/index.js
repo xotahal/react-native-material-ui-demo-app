@@ -39,20 +39,21 @@ class List extends Component {
                     />
                     <ListItem
                         divider
-                        leftElement="person"
-                        centerElement={{
-                            primaryText: 'Center element as an object',
-                        }}
-                        onPress={() => {}}
+                        centerElement="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                     />
                     <ListItem
                         divider
                         dense
                         centerElement="Center element as a text (dense)"
                     />
+                    <Subheader text="One line with icon" />
                     <ListItem
                         divider
-                        centerElement="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                        leftElement="person"
+                        centerElement={{
+                            primaryText: 'Center element as an object',
+                        }}
+                        onPress={() => {}}
                     />
 
 
@@ -72,6 +73,7 @@ class List extends Component {
                             secondaryText: 'Subtext',
                         }}
                     />
+                    <Subheader text="Two lines with icon" />
                     <ListItem
                         divider
                         leftElement="person"
@@ -101,6 +103,15 @@ class List extends Component {
                         }}
                     />
                     <Subheader text="Three lines" />
+                    <ListItem
+                        divider
+                        leftElement="person"
+                        centerElement={{
+                            primaryText: 'Center element as an object',
+                            secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing.',
+                        }}
+                        numberOfLines={3}
+                    />
                     <Subheader text="Dynamic" />
                     <ListItem
                         divider
@@ -108,7 +119,7 @@ class List extends Component {
                         numberOfLines="dynamic"
                         centerElement={{
                             primaryText: 'With dynamic second line',
-                            secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing lit',
+                            secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing. Pellentesque commodo ultrices diam. Praesent in ipsum',
                         }}
                         onPress={() => {}}
                     />
