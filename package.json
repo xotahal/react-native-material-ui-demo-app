@@ -8,11 +8,13 @@
   },
   "dependencies": {
     "babel-eslint": "^6.1.2",
+    "color": "^0.11.3",
     "eslint": "^3.6.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^1.11.1",
     "eslint-plugin-jsx-a11y": "^2.2.0",
     "eslint-plugin-react": "^6.3.0",
+    "lodash.merge": "^4.6.0",
     "react": "15.3.1",
     "react-native": "^0.34.0",
     "react-native-material-design-styles": "^0.2.6",
