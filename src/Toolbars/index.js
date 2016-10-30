@@ -56,6 +56,17 @@ class ToolbarSpec extends Component {
                     />
                 </View>
                 <View style={styles.container}>
+                    <Toolbar
+                        size={16}
+                        leftElement="clear"
+                        centerElement="Custom icon size"
+                        rightElement={{
+                            actions: ['edit'],
+                            menu: { labels: ['Item 1', 'Item 2'] },
+                        }}
+                    />
+                </View>
+                <View style={styles.container}>
                     <Toolbar centerElement="Only title" />
                 </View>
             </Container>

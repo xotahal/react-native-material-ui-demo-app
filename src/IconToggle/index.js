@@ -40,7 +40,10 @@ class IconToggleSpec extends Component {
                 <View style={styles.rowContainer}>
                     <IconToggle name="person" />
                     <IconToggle name="person" size={30} />
-                    <IconToggle name="person" size={36} />
+                    <IconToggle
+                        name="person"
+                        style={{ icon: { width: 36, height: 36 } }}
+                    />
                 </View>
             </Container>
         );
