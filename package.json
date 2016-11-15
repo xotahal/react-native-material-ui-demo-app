@@ -18,6 +18,6 @@
     "react": "15.3.1",
     "react-native": "^0.37.0",
     "react-native-material-design-styles": "^0.2.6",
-    "react-native-vector-icons": "^2.0.3"
+    "react-native-vector-icons": "^3.0.0"
   }
 }
