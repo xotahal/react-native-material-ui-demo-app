@@ -4,6 +4,7 @@ import ActionButton from './ActionButton';
 import ActionButtonToolbar from './ActionButton/ActionButtonToolbar.react';
 import ActionButtonSpeedDial from './ActionButton/ActionButtonSpeedDial.react';
 import Avatar from './Avatar';
+import Badge from './Badge';
 import Button from './Button';
 import Card from './Card';
 import Checkbox from './Checkbox';
@@ -34,6 +35,10 @@ export default {
     avatar: {
         title: 'Avatars',
         Page: Avatar,
+    },
+    badge: {
+        title: 'Badge',
+        Page: Badge,
     },
     button: {
         title: 'Buttons',

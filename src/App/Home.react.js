@@ -97,6 +97,7 @@ class Home extends Component {
                 >
                     {this.renderItem('Action buttons', routes.actionButton)}
                     {this.renderItem('Avatars', routes.avatar)}
+                    {this.renderItem('Badge', routes.badge)}
                     {this.renderItem('Buttons', routes.button)}
                     {this.renderItem('Cards', routes.card)}
                     {this.renderItem('Checkbox', routes.checkbox)}
