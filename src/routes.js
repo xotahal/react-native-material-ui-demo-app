@@ -4,6 +4,7 @@ import ActionButton from './ActionButton';
 import ActionButtonToolbar from './ActionButton/ActionButtonToolbar.react';
 import ActionButtonSpeedDial from './ActionButton/ActionButtonSpeedDial.react';
 import Avatar from './Avatar';
+import BottomNavigation from './BottomNavigation';
 import Badge from './Badge';
 import Button from './Button';
 import Card from './Card';
@@ -39,6 +40,10 @@ export default {
     badge: {
         title: 'Badge',
         Page: Badge,
+    },
+    bottomNavigation: {
+        title: 'Bottom navigation',
+        Page: BottomNavigation,
     },
     button: {
         title: 'Buttons',
