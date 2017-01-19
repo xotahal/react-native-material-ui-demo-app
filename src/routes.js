@@ -15,6 +15,7 @@ import IconToggle from './IconToggle';
 import List from './List';
 import RadioButton from './RadioButton';
 import Toolbar from './Toolbars';
+import Snackbar from './Snackbar';
 
 export default {
     home: {
@@ -76,6 +77,10 @@ export default {
     radioButton: {
         title: 'Radio buttons',
         Page: RadioButton,
+    },
+    snackbar: {
+        title: 'Snackbar',
+        Page: Snackbar,
     },
     toolbar: {
         title: 'Toolbars',

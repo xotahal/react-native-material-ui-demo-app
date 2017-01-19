@@ -1,1 +1,5 @@
 
+[submodule "src/react-native-material-ui"]
+	path = src/react-native-material-ui
+	url = https://github.com/HofmannZ/react-native-material-ui.git
+	branch = snackbar
