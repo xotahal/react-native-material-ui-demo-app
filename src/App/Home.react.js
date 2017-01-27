@@ -161,6 +161,7 @@ class Home extends Component {
                     {this.renderItem('Icon toggles', routes.iconToggle)}
                     {this.renderItem('List items', routes.list)}
                     {this.renderItem('Radio buttons', routes.radioButton)}
+                    {this.renderItem('Snackbar', routes.snackbar)}
                     {this.renderItem('Toolbars', routes.toolbar)}
                 </ScrollView>
                 <ActionButton
