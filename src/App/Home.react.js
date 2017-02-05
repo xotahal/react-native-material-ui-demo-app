@@ -11,6 +11,7 @@ import {
     ListItem,
     Toolbar,
     BottomNavigation,
+    Icon,
 } from '../react-native-material-ui/src';
 
 const UP = 1;
@@ -189,7 +190,7 @@ class Home extends Component {
                 >
                     <BottomNavigation.Action
                         key="today"
-                        icon="today"
+                        icon={<Icon name="today" />}
                         label="Today"
                         onPress={() => this.setState({ active: 'today' })}
                     />
