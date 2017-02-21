@@ -16,7 +16,7 @@
     "eslint-plugin-react": "^6.3.0",
     "lodash.merge": "^4.6.0",
     "react": "15.4.1",
-    "react-native": "^0.39.2",
+    "react-native": "^0.41.2",
     "react-native-material-design-styles": "^0.2.6",
     "react-native-vector-icons": "^3.0.0"
   }

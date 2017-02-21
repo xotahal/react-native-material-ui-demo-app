@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Container from '../Container';
 
-import { Toolbar, Button } from '../react-native-material-ui';
+import { Toolbar, Button, COLOR } from '../react-native-material-ui';
 
 const styles = StyleSheet.create({
     container: {
@@ -63,6 +63,22 @@ class ToolbarSpec extends Component {
                         rightElement={{
                             actions: ['edit'],
                             menu: { labels: ['Item 1', 'Item 2'] },
+                        }}
+                    />
+                </View>
+                <View style={styles.container}>
+                    <Toolbar
+                        leftElement="clear"
+                        centerElement="Custom styles"
+                        rightElement={{
+                            actions: ['edit'],
+                            menu: { labels: ['Item 1', 'Item 2'] },
+                        }}
+                        style={{
+                            container: { backgroundColor: COLOR.orange300 },
+                            leftElement: { color: COLOR.orange900 },
+                            titleText: { color: COLOR.orange900 },
+                            rightElement: { color: COLOR.orange900 },
                         }}
                     />
                 </View>
