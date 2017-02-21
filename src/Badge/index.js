@@ -110,6 +110,43 @@ class BadgeSpec extends Component {
                         </Badge>
                     </View>
                 </View>
+                <Subheader text="Badge with strokes" />
+                <View style={styles.rowContainer}>
+                    <View style={styles.badgeContainer}>
+                        <Badge
+                            size={24}
+                            stroke={4}
+                            icon="star"
+                            style={{ strokeContainer: { bottom: -8, right: -12 } }}
+                        >
+                            <Avatar text="BR" />
+                        </Badge>
+                    </View>
+                    <View style={styles.badgeContainer}>
+                        <Badge
+                            size={24}
+                            stroke={8}
+                            accent
+                            icon={{
+                                name: 'speaker-notes',
+                                color: 'white',
+                            }}
+                            style={{ strokeContainer: { top: -8, right: -12 } }}
+                        >
+                            <Avatar text="TR" />
+                        </Badge>
+                    </View>
+                    <View style={styles.badgeContainer}>
+                        <Badge
+                            accent
+                            size={12}
+                            stroke={4}
+                            style={{ strokeContainer: { top: 0, right: 0 } }}
+                        >
+                            <Icon name="notifications" />
+                        </Badge>
+                    </View>
+                </View>
             </Container>
         );
     }
