@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Navigator, NativeModules, StatusBar, View } from 'react-native';
+import { NativeModules, StatusBar, View } from 'react-native';
+import { Navigator } from 'react-native-deprecated-custom-components';
 
 import { COLOR, ThemeProvider } from '../react-native-material-ui';
 import routes from '../routes';
