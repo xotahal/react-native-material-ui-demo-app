@@ -4,7 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "clear": "watchman watch-del-all && rm -fr $TMPDIR/react-*",
     "lint": "eslint ./"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts"
+    ]
   },
   "dependencies": {
     "babel-eslint": "^6.1.2",
@@ -19,6 +25,9 @@
     "react-native": "^0.44.0",
     "react-native-deprecated-custom-components": "^0.1.0",
     "react-native-material-design-styles": "^0.2.6",
-    "react-native-vector-icons": "^3.0.0"
+    "react-native-vector-icons": "^4.3.0"
+  },
+  "devDependencies": {
+    "prop-types": "^15.5.10"
   }
 }
