@@ -1,8 +1,9 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 const propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
 };
 const styles = StyleSheet.create({
     container: {

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import Container from '../Container';
 
@@ -11,8 +12,9 @@ const styles = StyleSheet.create({
 });
 
 const propTypes = {
-    navigator: PropTypes.object.isRequired,
-    route: PropTypes.object.isRequired,
+    navigation: PropTypes.shape({
+        goBack: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 class ToolbarSpec extends Component {
@@ -21,8 +23,8 @@ class ToolbarSpec extends Component {
             <Container>
                 <Toolbar
                     leftElement="arrow-back"
-                    onLeftElementPress={() => this.props.navigator.pop()}
-                    centerElement={this.props.route.title}
+                    onLeftElementPress={() => this.props.navigation.goBack()}
+                    centerElement="Title"
                 />
                 <View style={styles.container}>
                     <Toolbar

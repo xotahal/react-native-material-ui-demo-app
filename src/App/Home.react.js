@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { ToastAndroid, ScrollView, Platform, Animated, Easing } from 'react-native';
 
 import routes from '../routes';
@@ -18,8 +19,10 @@ const UP = 1;
 const DOWN = -1;
 
 const propTypes = {
-    navigator: PropTypes.object.isRequired,
-    route: PropTypes.object.isRequired,
+    navigation: PropTypes.shape({
+        goBack: PropTypes.func.isRequired,
+        navigate: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 class Home extends Component {
@@ -32,7 +35,6 @@ class Home extends Component {
         this.state = {
             selected: [],
             searchText: '',
-            toolbarHidden: false,
             active: 'people',
             moveAnimated: new Animated.Value(0),
         };
@@ -112,8 +114,8 @@ class Home extends Component {
             <Toolbar
                 key="toolbar"
                 leftElement="menu"
-                onLeftElementPress={() => this.props.navigator.pop()}
-                centerElement={this.props.route.title}
+                onLeftElementPress={() => this.props.navigation.goBack()}
+                centerElement="Home"
                 searchable={{
                     autoFocus: true,
                     placeholder: 'Search',
@@ -136,7 +138,7 @@ class Home extends Component {
                 leftElement={<Avatar text={title[0]} />}
                 onLeftElementPress={() => this.onAvatarPressed(title)}
                 centerElement={title}
-                onPress={() => this.props.navigator.push(route)}
+                onPress={() => this.props.navigation.navigate(route)}
             />
 
         );
@@ -146,23 +148,23 @@ class Home extends Component {
             <Container>
                 {this.renderToolbar()}
                 <ScrollView
-                    keyboardShouldPersistTaps
+                    keyboardShouldPersistTaps="always"
                     keyboardDismissMode="interactive"
                     onScroll={this.onScroll}
                 >
-                    {this.renderItem('Action buttons', routes.actionButton)}
-                    {this.renderItem('Avatars', routes.avatar)}
-                    {this.renderItem('Badge', routes.badge)}
-                    {this.renderItem('Bottom navigation', routes.bottomNavigation)}
-                    {this.renderItem('Buttons', routes.button)}
-                    {this.renderItem('Cards', routes.card)}
-                    {this.renderItem('Checkbox', routes.checkbox)}
-                    {this.renderItem('Dialog', routes.dialog)}
-                    {this.renderItem('Drawer', routes.drawer)}
-                    {this.renderItem('Icon toggles', routes.iconToggle)}
-                    {this.renderItem('List items', routes.list)}
-                    {this.renderItem('Radio buttons', routes.radioButton)}
-                    {this.renderItem('Toolbars', routes.toolbar)}
+                    {this.renderItem('Action buttons', 'actionButton')}
+                    {this.renderItem('Avatars', 'avatar')}
+                    {this.renderItem('Badge', 'badge')}
+                    {this.renderItem('Bottom navigation', 'bottomNavigation')}
+                    {this.renderItem('Buttons', 'button')}
+                    {this.renderItem('Cards', 'card')}
+                    {this.renderItem('Checkbox', 'checkbox')}
+                    {this.renderItem('Dialog', 'dialog')}
+                    {this.renderItem('Drawer', 'drawer')}
+                    {this.renderItem('Icon toggles', 'iconToggle')}
+                    {this.renderItem('List items', 'list')}
+                    {this.renderItem('Radio buttons', 'radioButton')}
+                    {this.renderItem('Toolbars', 'toolbar')}
                 </ScrollView>
                 <ActionButton
                     actions={[

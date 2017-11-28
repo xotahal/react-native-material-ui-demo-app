@@ -1,3 +1,5 @@
+import { StackNavigator } from 'react-navigation';
+
 import Home from './App/Home.react';
 // components
 import ActionButton from './ActionButton';
@@ -16,69 +18,105 @@ import List from './List';
 import RadioButton from './RadioButton';
 import Toolbar from './Toolbars';
 
-export default {
+const AppNavigator = StackNavigator({
     home: {
-        title: 'Select component',
-        Page: Home,
+        screen: Home,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     actionButton: {
-        title: 'Action buttons',
-        Page: ActionButton,
+        screen: ActionButton,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     actionButtonToolbar: {
-        title: 'Toolbar transition',
-        Page: ActionButtonToolbar,
+        screen: ActionButtonToolbar,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     actionButtonSpeedDial: {
-        title: 'Speed dial transition',
-        Page: ActionButtonSpeedDial,
+        screen: ActionButtonSpeedDial,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     avatar: {
-        title: 'Avatars',
-        Page: Avatar,
+        screen: Avatar,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     badge: {
-        title: 'Badge',
-        Page: Badge,
+        screen: Badge,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     bottomNavigation: {
-        title: 'Bottom navigation',
-        Page: BottomNavigation,
+        screen: BottomNavigation,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     button: {
-        title: 'Buttons',
-        Page: Button,
+        screen: Button,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     card: {
-        title: 'Cards',
-        Page: Card,
+        screen: Card,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     checkbox: {
-        title: 'Checkboxes',
-        Page: Checkbox,
+        screen: Checkbox,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     dialog: {
-        title: 'Dialogs',
-        Page: Dialog,
+        screen: Dialog,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     drawer: {
-        title: 'Drawer',
-        Page: Drawer,
+        screen: Drawer,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     iconToggle: {
-        title: 'Icon toggles',
-        Page: IconToggle,
+        screen: IconToggle,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     list: {
-        title: 'List items',
-        Page: List,
+        screen: List,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     radioButton: {
-        title: 'Radio buttons',
-        Page: RadioButton,
+        screen: RadioButton,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
     toolbar: {
-        title: 'Toolbars',
-        Page: Toolbar,
+        screen: Toolbar,
+        navigationOptions: {
+            headerTitle: 'Home',
+        },
     },
-};
+}, {
+    headerMode: 'none',
+});
+
+export default AppNavigator;

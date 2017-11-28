@@ -1,5 +1,6 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 import { Checkbox, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -11,8 +12,9 @@ const styles = StyleSheet.create({
 });
 
 const propTypes = {
-    navigator: PropTypes.object.isRequired,
-    route: PropTypes.object.isRequired,
+    navigation: PropTypes.shape({
+        goBack: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 class CheckboxSpec extends Component {
@@ -26,8 +28,8 @@ class CheckboxSpec extends Component {
             <Container>
                 <Toolbar
                     leftElement="arrow-back"
-                    onLeftElementPress={() => this.props.navigator.pop()}
-                    centerElement={this.props.route.title}
+                    onLeftElementPress={() => this.props.navigation.goBack()}
+                    centerElement="Checkbox"
                 />
                 <View style={styles.container}>
                     <Checkbox

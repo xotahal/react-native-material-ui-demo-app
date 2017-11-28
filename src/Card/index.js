@@ -1,5 +1,6 @@
 import { View, StyleSheet, Text } from 'react-native';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 import { Avatar, Card, ListItem, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
@@ -12,8 +13,9 @@ const styles = StyleSheet.create({
 });
 
 const propTypes = {
-    navigator: PropTypes.object.isRequired,
-    route: PropTypes.object.isRequired,
+    navigation: PropTypes.shape({
+        goBack: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 class CardSpec extends Component {
@@ -22,8 +24,8 @@ class CardSpec extends Component {
             <Container>
                 <Toolbar
                     leftElement="arrow-back"
-                    onLeftElementPress={() => this.props.navigator.pop()}
-                    centerElement={this.props.route.title}
+                    onLeftElementPress={() => this.props.navigation.goBack()}
+                    centerElement="Card"
                 />
                 <Card>
                     <ListItem

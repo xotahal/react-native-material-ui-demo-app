@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { NativeModules, StatusBar, View } from 'react-native';
-import { Navigator } from 'react-native-deprecated-custom-components';
 
 import { COLOR, ThemeProvider } from '../react-native-material-ui';
-import routes from '../routes';
 import Container from '../Container';
+import MainTabNavigator from '../routes';
 
 const UIManager = NativeModules.UIManager;
 
@@ -39,12 +38,13 @@ class App extends Component {
     render() {
         return (
             <ThemeProvider uiTheme={uiTheme}>
-                <Navigator
+                <MainTabNavigator ref={(nav) => { this.navigator = nav; }} />
+                {/* <Navigator
                     configureScene={App.configureScene}
                     initialRoute={routes.home}
                     ref={this.onNavigatorRef}
                     renderScene={App.renderScene}
-                />
+                /> */}
             </ThemeProvider>
         );
     }

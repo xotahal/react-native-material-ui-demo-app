@@ -1,9 +1,8 @@
 import { View, StyleSheet } from 'react-native';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 import { ListItem, Toolbar } from '../react-native-material-ui';
-
-import routes from '../routes';
 
 const styles = StyleSheet.create({
     container: {
@@ -11,8 +10,10 @@ const styles = StyleSheet.create({
     },
 });
 const propTypes = {
-    navigator: PropTypes.object.isRequired,
-    route: PropTypes.object.isRequired,
+    navigation: PropTypes.shape({
+        goBack: PropTypes.func.isRequired,
+        navigate: PropTypes.func.isRequired,
+    }).isRequired,
 };
 
 class ActionButtonSpec extends Component {
@@ -21,18 +22,18 @@ class ActionButtonSpec extends Component {
             <View style={styles.container}>
                 <Toolbar
                     leftElement="arrow-back"
-                    onLeftElementPress={() => this.props.navigator.pop()}
-                    centerElement={this.props.route.title}
+                    onLeftElementPress={() => this.props.navigation.goBack()}
+                    centerElement="Action buttons"
                 />
                 <ListItem
                     divider
                     centerElement="With toolbar transition"
-                    onPress={() => this.props.navigator.push(routes.actionButtonToolbar)}
+                    onPress={() => this.props.navigation.navigate('actionButtonToolbar')}
                 />
                 <ListItem
                     divider
                     centerElement="With speed dial transition"
-                    onPress={() => this.props.navigator.push(routes.actionButtonSpeedDial)}
+                    onPress={() => this.props.navigation.navigate('actionButtonSpeedDial')}
                 />
             </View>
         );
