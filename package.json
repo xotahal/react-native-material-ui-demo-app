@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "restart": "rm -rf $TMPDIR/react-* && watchman watch-del-all && node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
     "clear": "watchman watch-del-all && rm -fr $TMPDIR/react-*",
     "lint": "eslint ./"
   },
