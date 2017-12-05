@@ -35,8 +35,8 @@ class DrawerSpec extends Component {
                             <Drawer.Header.Account
                                 avatar={<Avatar text="A" />}
                                 accounts={[
-                                    { avatar: <Avatar text="B" /> },
-                                    { avatar: <Avatar text="C" /> },
+                                    { avatar: <Avatar text="B" />, key: 'b' },
+                                    { avatar: <Avatar text="C" />, key: 'c' },
                                 ]}
                                 footer={{
                                     dense: true,
