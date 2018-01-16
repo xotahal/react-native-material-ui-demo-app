@@ -1,11 +1,12 @@
 {
-  "name": "example",
+  "name": "react-native-material-ui-demo-app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "restart": "rm -rf $TMPDIR/react-* && watchman watch-del-all && node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
-    "clear": "watchman watch-del-all && rm -fr $TMPDIR/react-*",
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
     "lint": "eslint ./"
   },
   "rnpm": {
