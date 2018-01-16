@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, ScrollView, ToastAndroid, Platform } from 'reac
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-import { ListItem, Subheader, Toolbar } from '../react-native-material-ui/src';
+import { ListItem, Subheader, Toolbar } from 'react-native-material-ui';
 
 const styles = StyleSheet.create({
     container: {

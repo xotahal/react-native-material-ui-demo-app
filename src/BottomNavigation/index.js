@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import { View, Text } from 'react-native';
 import Container from '../Container';
 
-import { Toolbar, BottomNavigation, Icon } from '../react-native-material-ui';
+import { Toolbar, BottomNavigation, Icon } from 'react-native-material-ui';
 
 const propTypes = {
     navigation: PropTypes.shape({

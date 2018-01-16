@@ -2,7 +2,7 @@ import { View, StyleSheet, Text } from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-import { Avatar, Card, ListItem, Toolbar } from '../react-native-material-ui';
+import { Avatar, Card, ListItem, Toolbar } from 'react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({

@@ -2,7 +2,7 @@ import { View, StyleSheet, Text } from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-import { Badge, Button, Icon, Toolbar, Subheader, Avatar } from '../react-native-material-ui/src';
+import { Badge, Button, Icon, Toolbar, Subheader, Avatar } from 'react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({

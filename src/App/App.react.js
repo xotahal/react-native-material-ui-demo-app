@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NativeModules, StatusBar, View } from 'react-native';
 
-import { COLOR, ThemeProvider } from '../react-native-material-ui';
+import { COLOR, ThemeProvider } from 'react-native-material-ui';
 import Container from '../Container';
 import MainTabNavigator from '../routes';
 
