@@ -25,7 +25,7 @@
     "lodash.merge": "^4.6.0",
     "prop-types": "^15.5.10",
     "react": "16.0.0",
-    "react-native": "0.50.4",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-24.0.0.tar.gz",
     "react-native-material-design-styles": "^0.2.6",
     "react-native-material-ui": "^1.19.0",
     "react-native-scripts": "^1.8.1",
