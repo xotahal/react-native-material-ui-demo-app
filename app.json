@@ -14,6 +14,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "assets/**",
+      "node_modules/react-navigation/src/**/*.png",
+      "node_modules/@expo/vector-icons/fonts/*.ttf"
+    ],
     "android": {
       "package": "com.zhibek.react_native_material_ui_demo_app",
     },
