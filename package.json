@@ -22,15 +22,15 @@
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
     "eslint-plugin-react": "7.5.1",
-    "expo": "^24.0.2",
+    "expo": "^25.0.0",
     "lodash.merge": "^4.6.0",
     "prop-types": "^15.5.10",
-    "react": "16.0.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-24.0.0.tar.gz",
+    "react": "16.2.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-native-material-design-styles": "^0.2.6",
     "react-native-material-ui": "^1.19.0",
-    "react-native-scripts": "^1.8.1",
+    "react-native-scripts": "^1.10.0",
     "react-native-vector-icons": "4.4.2",
-    "react-navigation": "^1.0.0-beta.21"
+    "react-navigation": "^1.0.0-beta.27"
   }
 }
