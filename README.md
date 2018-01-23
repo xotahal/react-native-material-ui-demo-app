@@ -8,9 +8,5 @@ This repository contains a React Native project, implementing the [react-native-
 
 1. Clone this repo.
 2. Run `yarn install`.
-3. `git submodule init`
-4. `git submodule update`
-5. Ensure a device, or emulated Android image is connected (`adb devices`).
-6. Run `react-native run-android`.
-
-> If running on a device, run `adb reverse tcp:8081 tcp:8081`.
+3. Run `yarn start`
+4. Use an Android/iOS device (with Expo client installed) to read the QR code and run the app.

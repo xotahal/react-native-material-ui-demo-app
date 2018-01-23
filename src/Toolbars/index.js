@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import Container from '../Container';
 
-import { Toolbar, Button, COLOR } from '../react-native-material-ui';
+import { Toolbar, Button, COLOR } from 'react-native-material-ui';
 
 const styles = StyleSheet.create({
     container: {

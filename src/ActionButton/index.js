@@ -2,7 +2,7 @@ import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-import { ListItem, Toolbar } from '../react-native-material-ui';
+import { ListItem, Toolbar } from 'react-native-material-ui';
 
 const styles = StyleSheet.create({
     container: {
