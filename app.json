@@ -14,6 +14,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "android": {
+      "package": "com.zhibek.react_native_material_ui_demo_app",
+    },
     "ios": {
       "supportsTablet": true
     }
