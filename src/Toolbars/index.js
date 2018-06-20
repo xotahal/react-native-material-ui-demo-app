@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { View, StyleSheet } from 'react-native';
-import Container from '../Container';
+import { Toolbar, Button, COLOR } from 'react-native-material-ui';
 
-import { Toolbar, Button, COLOR } from '../react-native-material-ui';
+import Container from '../Container';
 
 const styles = StyleSheet.create({
     container: {
@@ -50,10 +50,7 @@ class ToolbarSpec extends Component {
                         leftElement="clear"
                         centerElement="With button"
                         rightElement={
-                            <Button
-                                text="Save"
-                                style={{ text: { color: 'white' } }}
-                            />
+                            <Button text="Save" style={{ text: { color: 'white' } }} />
                         }
                     />
                 </View>

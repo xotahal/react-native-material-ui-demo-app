@@ -1,8 +1,14 @@
-import { Text, View, StyleSheet, ScrollView, ToastAndroid, Platform } from 'react-native';
+import {
+    Text,
+    View,
+    StyleSheet,
+    ScrollView,
+    ToastAndroid,
+    Platform,
+} from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-
-import { ListItem, Subheader, Toolbar } from '../react-native-material-ui/src';
+import { ListItem, Subheader, Toolbar } from 'react-native-material-ui/src';
 
 const styles = StyleSheet.create({
     container: {
@@ -64,14 +70,14 @@ class List extends Component {
                         onPress={() => {}}
                     />
 
-
                     <Subheader text="Two lines" />
                     <ListItem
                         divider
                         dense
                         centerElement={{
                             primaryText: 'Center element as an object (dense)',
-                            secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum',
+                            secondaryText:
+                'Pellentesque commodo ultrices diam. Praesent in ipsum',
                         }}
                     />
                     <ListItem
@@ -94,8 +100,10 @@ class List extends Component {
                         divider
                         leftElement="person"
                         centerElement={{
-                            primaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                            secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum',
+                            primaryText:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                            secondaryText:
+                'Pellentesque commodo ultrices diam. Praesent in ipsum',
                         }}
                         rightElement="info"
                         onLeftElementPress={() => {
@@ -103,7 +111,9 @@ class List extends Component {
                                 ToastAndroid.show('Left element pressed', ToastAndroid.SHORT);
                             }
                         }}
-                        onPress={() => ToastAndroid.show('List item pressed', ToastAndroid.SHORT)}
+                        onPress={() =>
+                            ToastAndroid.show('List item pressed', ToastAndroid.SHORT)
+                        }
                         onRightElementPress={() => {
                             if (Platform.OS === 'android') {
                                 ToastAndroid.show('Right element pressed', ToastAndroid.SHORT);
@@ -116,7 +126,8 @@ class List extends Component {
                         leftElement="person"
                         centerElement={{
                             primaryText: 'Center element as an object',
-                            secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing.',
+                            secondaryText:
+                'Pellentesque commodo ultrices diam. Praesent in ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing.',
                         }}
                         numberOfLines={3}
                     />
@@ -125,8 +136,10 @@ class List extends Component {
                         leftElement="person"
                         centerElement={{
                             primaryText: 'Center element as an object',
-                            secondaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing.',
-                            tertiaryText: 'Praesent in ipsum. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet',
+                            secondaryText:
+                'Pellentesque commodo ultrices diam. Praesent in ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing.',
+                            tertiaryText:
+                'Praesent in ipsum. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet',
                         }}
                     />
                     <ListItem
@@ -135,7 +148,8 @@ class List extends Component {
                         centerElement={{
                             primaryText: 'Ali Connors',
                             secondaryText: 'Brunch this weekend?',
-                            tertiaryText: 'Pellentesque commodo ultrices diam. Praesent in ipsum.',
+                            tertiaryText:
+                'Pellentesque commodo ultrices diam. Praesent in ipsum.',
                         }}
                         style={{
                             secondaryText: { color: flattenPrimaryText.color },
@@ -148,7 +162,8 @@ class List extends Component {
                         numberOfLines="dynamic"
                         centerElement={{
                             primaryText: 'With dynamic second line',
-                            secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing. Pellentesque commodo ultrices diam. Praesent in ipsum',
+                            secondaryText:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing. Pellentesque commodo ultrices diam. Praesent in ipsum',
                         }}
                         onPress={() => {}}
                     />

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Container from '../Container';
+import { ActionButton, Toolbar } from 'react-native-material-ui';
 
-import { ActionButton, Toolbar } from '../react-native-material-ui';
+import Container from '../Container';
 
 const propTypes = {
     navigation: PropTypes.shape({

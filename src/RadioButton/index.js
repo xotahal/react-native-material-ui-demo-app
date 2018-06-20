@@ -1,8 +1,8 @@
 import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
+import { RadioButton, Toolbar } from 'react-native-material-ui';
 
-import { RadioButton, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -47,7 +47,12 @@ class RadioButtonSpec extends Component {
                         value="Value"
                     />
                     <RadioButton label="Disabled unchecked" disabled value="Value" />
-                    <RadioButton label="Disabled checked" checked disabled value="Value" />
+                    <RadioButton
+                        label="Disabled checked"
+                        checked
+                        disabled
+                        value="Value"
+                    />
                 </View>
             </Container>
         );

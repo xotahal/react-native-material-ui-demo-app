@@ -1,8 +1,8 @@
 import { View, StyleSheet, Text } from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
+import { Avatar, Card, ListItem, Toolbar } from 'react-native-material-ui';
 
-import { Avatar, Card, ListItem, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -37,10 +37,10 @@ class CardSpec extends Component {
                     />
                     <View style={styles.textContainer}>
                         <Text>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                            quasi architecto beatae vitae dicta sunt explicabo.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
                         </Text>
                     </View>
                 </Card>
@@ -54,10 +54,10 @@ class CardSpec extends Component {
                     />
                     <View style={styles.textContainer}>
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
                         </Text>
                     </View>
                 </Card>

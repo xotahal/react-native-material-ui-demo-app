@@ -1,8 +1,13 @@
 import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
+import {
+    COLOR,
+    IconToggle,
+    Subheader,
+    Toolbar,
+} from 'react-native-material-ui';
 
-import { COLOR, IconToggle, Subheader, Toolbar } from '../react-native-material-ui';
 import Container from '../Container';
 
 const styles = StyleSheet.create({
@@ -19,11 +24,6 @@ const propTypes = {
 };
 
 class IconToggleSpec extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = { checked: false };
-    }
     render() {
         return (
             <Container>

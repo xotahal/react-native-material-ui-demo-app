@@ -2,7 +2,7 @@ import { View, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-import { ListItem, Toolbar } from '../react-native-material-ui';
+import { ListItem, Toolbar } from 'react-native-material-ui';
 
 const styles = StyleSheet.create({
     container: {
@@ -33,7 +33,9 @@ class ActionButtonSpec extends Component {
                 <ListItem
                     divider
                     centerElement="With speed dial transition"
-                    onPress={() => this.props.navigation.navigate('actionButtonSpeedDial')}
+                    onPress={() =>
+                        this.props.navigation.navigate('actionButtonSpeedDial')
+                    }
                 />
             </View>
         );

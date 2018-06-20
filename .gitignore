@@ -42,6 +42,7 @@ ehthumbs.db
 Thumbs.db
 fastlane/README*
 *xcworkspacedata
+*/local.properties
 
 # Directories #
 ###############
