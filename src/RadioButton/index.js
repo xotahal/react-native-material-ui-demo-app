@@ -36,7 +36,7 @@ class RadioButtonSpec extends Component {
                         label="Unchecked"
                         checked={this.state.checked}
                         value="Value"
-                        onCheck={checked => this.setState({ checked })}
+                        onSelect={checked => this.setState({ checked })}
                     />
                     <RadioButton label="Checked by default" checked value="Value" />
                     <RadioButton
