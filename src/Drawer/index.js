@@ -27,7 +27,7 @@ class DrawerSpec extends Component {
                 <Toolbar
                     leftElement="arrow-back"
                     onLeftElementPress={() => this.props.navigation.goBack()}
-                    centerElement="Dialog"
+                    centerElement="Drawer"
                 />
                 <View style={styles.container}>
                     <Drawer>
