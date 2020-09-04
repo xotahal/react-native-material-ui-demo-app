@@ -21,7 +21,7 @@
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
     "eslint-plugin-react": "7.5.1",
-    "lodash.merge": "^4.6.0",
+    "lodash.merge": "^4.6.2",
     "prop-types": "^15.5.10",
     "react": "16.0.0",
     "react-native": "0.50.4",
