@@ -24,7 +24,7 @@
     "lodash.merge": "^4.6.0",
     "prop-types": "^15.5.10",
     "react": "16.0.0",
-    "react-native": "0.50.4",
+    "react-native": "0.70.6",
     "react-native-material-design-styles": "^0.2.6",
     "react-native-vector-icons": "4.4.2",
     "react-navigation": "^1.0.0-beta.21"
